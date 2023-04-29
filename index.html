@@ -1,59 +1,91 @@
-*{
-    color: white;
-}
-body{
-    background-color: rgb(247, 237, 219);
-}
-.container{
-    width: 800px;
-    background-color: #0d5c63;
-    margin-left: 450px;
-    margin-top: 300px;
-    border-radius: 10px;
-}
-h2 {
-    font-weight: bolder;
-    text-align: center;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 3px black;
-    font-family: 'Righteous', cursive;
-}
-p{
-    font-family: 'Roboto Slab', serif;
-    font-size: x-large;
-    margin-left: 20px;
-}
-form{
-    margin-left: 20px; 
-    font-size: x-large;
-    font-weight: bolder;
-}
-input{
-    width: 300px;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    color: #0d5c63;
-    font-weight: bolder;
-    font-size: x-large;
-}
-#labelBill{
-    margin-right: 78px;
-}
-#calculator{
-    padding: 20px;
-    width: 200px;
-    color: #0d5c63;
-    font-weight: bolder;
-    border-radius: 10px;
-    margin-left: 235px;
-    font-size: x-large;
-    margin-top: 25px;
-}
-#calculator:hover{
-    background-color: burlywood;
-}
-#total{
-    text-align: centers;
-}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f2f2f2;
+    }
+    
+    h2 {
+        margin-left: 100px;
+        font-family: 'Itim', cursive;
+        color: cadetblue;
+        font-size: xx-large;
+    }
+    
+    #heading2 {
+        margin-left: 50px;
+        font-family: 'Itim', cursive;
+        color: cadetblue;
+        font-size: x-large;
+    }
+    
+    #amount {
+        margin-left: 25px;
+        font-family: 'Itim', cursive;
+        color: cadetblue;
+        font-size: x-large;
+    }
+    
+    #BA {
+        margin-left: 130px;
+        padding: 10px;
+        padding-left: 100px;
+        border-radius: 50px;
+        border-color: cadetblue;
+    }
+    
+    #DP {
+        margin-left: 30px;
+        padding: 10px;
+        padding-left: 100px;
+        border-radius: 50px;
+        border-color: cadetblue;
+    }
+    
+    #cal {
+        margin-left: 50px;
+        border-radius: 20px;
+        border-color: cadetblue;
+        padding: 5px;
+        font-family: 'Itim', cursive;
+        font-size: x-large;
+        color: burlywood;
+    }
+    
+    #cal:hover {
+        background-color: forestgreen;
+    }
+    
+    #total {
+        margin-left: 25px;
+        font-family: 'Itim', cursive;
+        color: cadetblue;
+        font-size: x-large;
+    }
+</style>
+
+<body>
+    <h2>Discount Calculator</h2>
+    <span id="heading2">Enter the Bill amount and discount in percentage</span>
+    <br><br>
+    <label id="amount">Bill Amount</label>
+    <input type="number" id="BA">
+    <br><br>
+    <label id="amount">Discount Percentage</label>
+    <input type="number" id="DP">
+    <br>
+    <br>
+    <button type="button" id="cal">Calculate</button>
+    <br>
+    <br>
+    <span id="total">Total Discount Amount ==</span>
+</body>
+
+</html>
