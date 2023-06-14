@@ -8,18 +8,20 @@ const total = document.querySelector('#total');
 calculator.addEventListener('click', () => {
     const billValue = bill.value;
     const discountValue = discount.value;
-    const valid = isValid(discountValue);
+    const valid = isValid(discountValue, billValue);
+
+
     if (valid) {
         const discountAmount = billValue - (billValue * discountValue) / 100;
         total.innerHTML = `Total amount to pay is:${discountAmount}`;
     } else {
-        alert(`Entered discount is incorrect${discountValue}`);
+        alert(`Entered values are incorrect: ${billValue},${discountValue}`);
     }
 
 });
 
-function isValid(discount) {
-    if (discount < 0 || discount > 100) {
+function isValid(discount, bill) {
+    if (discount < 0 || discount > 100 || bill <= 0 || bill == "") {
         return false;
     }
     return true;
