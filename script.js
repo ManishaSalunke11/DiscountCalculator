@@ -21,3 +21,24 @@ function isValid(discount) {
     }
     return true;
 }
+
+
+calculator.addEventListener('click', () => {
+    const billValue = bill.value;
+    const discountValue = discount.value;
+    const validBill = isValidBill(billValue);
+    if (validBill) {
+        const discountAmount = billValue - (billValue * discountValue) / 100;
+        total.innerHTML = `Total amount to pay is:${discountAmount}`;
+    } else {
+        alert(`Entered bill is incorrect${billValue}`);
+    }
+
+});
+
+function isValidBill(bill) {
+    if (bill < 0 || bill == "") {
+        return false;
+    }
+    return true;
+}
