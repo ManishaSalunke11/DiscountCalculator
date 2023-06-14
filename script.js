@@ -5,6 +5,19 @@ const total = document.querySelector('#total');
 calculator.addEventListener('click', () => {
     const billValue = bill.value;
     const discountValue = discount.value;
-    const discountAmount = billValue - (billValue * discountValue) / 100;
-    total.innerHTML = `Total amount to pay is:${discountAmount}`;
+    const valid = isValid(discountValue);
+    if (valid) {
+        const discountAmount = billValue - (billValue * discountValue) / 100;
+        total.innerHTML = `Total amount to pay is:${discountAmount}`;
+    } else {
+        alert(`Entered discount is incorrect${discountValue}`);
+    }
+
 });
+
+function isValid(discount) {
+    if (discount < 0 || discount > 100) {
+        return false;
+    }
+    return true;
+}
